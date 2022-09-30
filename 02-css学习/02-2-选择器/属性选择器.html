@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+</head>
+
+<body>
+   <input type="text"  id="abandon " value="attr=xxx">
+    <input type="text" id="abandon text" value="attr~=xxx">
+    <input type="text" id="abandon-content" value="attr|xxx">
+    <input type="text" id="abandon-footer" value="attr^=xxx">
+    <input type="text" id="abandon-footer2" value="attr$=xxx">
+    <input type="text" id="abandon-center—abandon" value="attr*=xxx">
+</body>
+<style>
+
+    /*  [attr=xxx]  */
+    input[id="abandon"] {
+        color:red;
+    }
+
+    /* [attr~=xxx] 选择属性值包含xx */
+    input[id~="text"] {
+        color:pink;
+    }
+
+    /* [attr|xxx] 选择属性值中包含xxx */
+    input[id|content] {
+        color: green;
+    }
+
+    /* [attr^=xxx] 选择属性值正则匹配开头为xxx */
+    input[id^="abandon2"] {
+        color: blue;
+    }
+
+    /* [attr$=xxx] 选择属性值正则匹配结尾为xxx */
+    input[id$="footer2"] {
+        color: rgb(27, 95, 118);
+    }
+
+    /* [attr*=xxx] 选择属性值正则匹配包含为xxx */
+    input[id*="center"] {
+        color: rgb(70, 27, 118);
+    }
+
+</style>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+</head>
+<body>
+    <div class="abandon">
+        <div class="son1">son1</div>
+        <div class="son2">son2</div>
+        <div class="son3">son3</div>
+        <p>刘德华</p>
+        <h3>蔡徐坤</h3>
+        <p>猕猴桃</li>
+    </div>
+
+    <table>
+        <tr>
+            <th>姓名</th>
+            <th>区域</th>
+        </tr>
+        <tr>
+            <td>梵云飞</td>
+            <td>西西域</td>
+        </tr>
+        <tr>
+            <td>欢都落兰</td>
+            <td>南国</td>
+        </tr>
+        <tr>
+            <td>石宽</td>
+            <td>北山</td>
+        </tr>
+        <tr>
+            <td>涂山红红</td>
+            <td>涂山</td>
+        </tr>
+    </table>
+
+
+
+    <div class="box"></div>
+    <div class="box">这个元素的背景是粉色的</div>
+    <div class="box">
+        <!-- 这是一个注释 -->
+    </div>
+
+
+    <div class="onlychild">
+        <div>
+            <p>This is a paragraph.</p>
+        </div>
+
+        <div>
+            <span>This is a span.</span>
+            <p>This is a paragraph.</p>
+        </div>
+
+        <p><b>注意:</b> Internet Explorer 8以及更早版本的浏览器不支持 :only-child选择器.</p>
+    </div>
+
+
+    <div class="onlyoftype">
+        <div>
+            <p>This is a paragraph.</p>
+        </div>
+        
+        <div>
+            <p>This is a paragraph.</p>
+            <p>This is a paragraph.</p>
+        </div>
+        
+        </body>
+        
+        </html>
+    </div>
+
+</body>
+    <style>
+        /* 父元素的第一个孩子 */
+        .abandon div:first-child {
+            color: red;
+        }
+
+        /* 父元素的最后一个孩子 */
+        .abandon div:last-child {
+            color: blue;
+        }
+
+        /* 选择匹配元素所在文档的根元素
+            :root 在 CSS3 中， 一般用于定义全局 CSS 变量*/
+        :root{
+            background-color: pink;
+        }
+
+        /* 选择父元素内具有指定类型的第一个E元素 */
+        .abandon p:first-of-type {
+            color: red;
+        }
+
+        /* 选择父元素内指定类型的最后一个元素 */
+        .abandon p:last-of-type {
+            color: blue;
+        }
+
+        /* 选择父元素E的第N个子元素F。其中N可以是整数（1、2、3）、关键字（even、odd）、可以是公式（2n+1、-n+5）而且n值起始值为1 */
+        tr:nth-child(even) {
+            background-color: aquamarine;
+        }
+
+
+        /* 选择没有子元素的元素，而且该元素也不包含任何文本节点。  */
+        .box:empty {
+            background: lime;
+        }
+
+        /* 选择器匹配属于父元素中唯一子元素的元素 */
+        .onlychild p:only-child {
+            background:#ff0000;
+        }
+
+        /* 代表了任意一个元素，这个元素没有其他相同类型的兄弟元素。 */
+        .onlyoftype p:only-of-type{
+            background-color: #ff0000;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border-top: 1px solid lightcoral;
+            text-align: center;
+        }
+
+        tr:last-child td {
+            border-bottom: 1px solid lightcoral;
+        }
+
+
+
+        .box {
+            background: pink;
+            height: 80px;
+            width: 80px;
+            margin: 0 20px;
+        }
+
+
+
+
+
+
+
+    </style>
+</html>
