@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素类型</title>
+</head>
+<body>
+
+    <!-- !!!!!!!!! 外在盒子只控制换行是否 内在盒子才是控制样式 !!!!!!!!! -->
+
+    <!-- 两个盒子 block-block -->
+    <div class="block-level-box">块级元素</div>
+    <!-- 两个盒子 inline-inline -->
+    <div class="inline-box">内联元素</div>
+    <!-- 主盒子+一个附加盒子作为标记盒子 -->
+    <div class="list-item">标记元素</div>
+    <!-- 两个盒子 inline-block -->
+    <div class="inline-block-box">容器盒子</div>
+    <!-- 两个盒子 inline-table -->
+    和文字平起平坐的表格：<div class="inline-table">
+        <p>第1列</p>
+        <p>第2列</p>
+    </div>
+</body>
+<style>
+    .block-level-box {
+        display: block;
+    }
+    .inline-box {
+        display: inline;
+    }
+    .list-item {
+        display: list-item;
+    }
+    .inline-block-box {
+        display: inline-block;
+    }
+    .inline-table {
+        display: inline-table;
+        width: 128px;
+        margin-left: 10px;
+        border: 1px solid #cad5eb;
+    }
+    .inline-table > p {
+        display: table-cell;
+    }
+</style>
+</html>
